@@ -1,0 +1,14 @@
+Write a function that accepts an array of 10 integers (between 0 and 9), that returns a string of those numbers in the form of a phone number.
+
+
+import java.util.Arrays;
+public class Kata {
+  public static String createPhoneNumber(int[] numbers) {
+        String x = Arrays.toString(numbers).replaceAll("\\s+", "").replaceAll("\\D+", "");
+        String x1 = x.substring(0,3), x2= x.substring(3,6), x3 = x.substring(6,10);
+        String y1 = String.format("(%s) %s-%s", x1, x2, x3);
+
+
+        return y1;
+    }
+}
